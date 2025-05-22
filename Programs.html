@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"> <head>
+  <meta charset="UTF-8" />
+  <title>الاهداف والبرامج الرياضيه - مدونه فادي للياقه</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background-color: #0d0d0d;
+      margin: 0;
+      padding: 0;
+      color: #e0e0e0;
+      direction: rtl;
+    }
+
+    nav { /* تم تغيير .navbar الى nav */
+      background-color: #1f1f1f;
+      padding: 15px 30px; /* تم تعديل البادينغ */
+      display: flex; /* تم اضافه فليكس بوكس */
+      justify-content: space-between; /* تم اضافه التباعد */
+      align-items: center; /* تم محاذاه العناصر */
+      border-bottom: 1px solid #333; /* تم تعديل الحدود */
+      position: sticky;
+      top: 0;
+      z-index: 999; /* تم تعديل الزي اندكس */
+    }
+
+    nav h1 { /* اضافه عنوان للملاحه */
+      color: #28a745;
+      font-size: 1.8em;
+      margin: 0;
+    }
+
+    .nav-links {
+      list-style: none; /* ابقاء قائمه بلا نقاط */
+      margin: 0;
+      padding: 0;
+      display: flex; /* تحويل الي فليكس */
+      gap: 20px; /* اضافه فجوه بين الروابط */
+    }
+
+    .nav-links li {
+      display: inline-block; /* لم يعد ضروريا بسبب فليكس */
+      margin: 0; /* ازاله المارجن القديم */
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #e0e0e0; /* تم تغيير اللون ليتناسب مع الشريط الاساسي */
+      font-weight: bold;
+      font-size: 1.05em; /* تم تعديل حجم الخط */
+      transition: color 0.3s ease, border-bottom 0.3s ease; /* تم تعديل الانتقال */
+      padding-bottom: 3px; /* تم تعديل البادينغ */
+    }
+
+    .nav-links a:hover {
+      color: #28a745; /* تم تغيير اللون ليتناسب مع الشريط الاساسي */
+      border-bottom: 2px solid #28a745; /* تم تغيير اللون ليتناسب مع الشريط الاساسي */
+    }
+
+    header {
+      background-color: #111;
+      color: #00e676;
+      padding: 30px 20px;
+      text-align: center;
+      text-shadow: 0 0 10px #00e676;
+    }
+
+    .container {
+      max-width: 900px;
+      background: #1a1a1a;
+      margin: 30px auto;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 25px rgba(0, 255, 100, 0.08);
+    }
+
+    h2 {
+      color: #00e676;
+      margin-top: 40px;
+      font-size: 1.9em;
+      border-right: 4px solid #00e676;
+      padding-right: 10px;
+    }
+
+    h3 {
+      margin-top: 25px;
+      color: #00c853;
+      font-size: 1.4em;
+    }
+
+    p, li {
+      font-size: 1.1em;
+      line-height: 1.8em;
+      color: #cfcfcf;
+    }
+
+    ul {
+      padding-right: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #00e676;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      background-color: #2a2a2a;
+      border: 1px solid #444;
+      border-radius: 6px;
+      font-size: 1em;
+      color: #fff;
+      transition: border 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #00e676;
+      outline: none;
+    }
+
+    button.submit-btn {
+      margin-top: 25px;
+      background-color: #00e676;
+      border: none;
+      color: #121212;
+      padding: 12px 30px;
+      font-size: 1.1em;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      font-weight: bold;
+    }
+
+    button.submit-btn:hover {
+      background-color: #00c853;
+      box-shadow: 0 0 15px #00e67670;
+    }
+
+    .social-media {
+      margin-top: 40px;
+    }
+
+    .social-media a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #00e676;
+      font-weight: bold;
+      font-size: 1.2em;
+      transition: color 0.3s;
+    }
+
+    .social-media a:hover {
+      color: #00c853;
+    }
+
+    .next-button, .back-button {
+      display: inline-block;
+      margin-top: 40px;
+      padding: 12px 25px;
+      background-color: #00e676;
+      color: #121212;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .next-button:hover, .back-button:hover {
+      background-color: #00c853;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h1>فادي فيت</h1>
+    <div class="nav-links">
+      <a href="Home Page.html">الرئيسيه</a>
+      <a href="Programs.html">البرامج</a>
+      <a href="Strength.html">القوه</a>
+      <a href="Flexibility.html">المرونه</a>
+      <a href="Cardio.html">الكارديو</a>
+      <a href="index.html">تسجيل الدخول</a>
+    </div>
+  </nav>
+
+<header>
+  <h1>الاهداف والبرامج الرياضيه</h1>
+</header>
+
+<div class="container">
+
+  <h2>الروتين الرياضي</h2>
+  <p>تمارين القوه من 3 الي 4 مرات اسبوعيا، تمارين الكارديو من 4 الي 5 مرات اسبوعيا، وتمارين المرونه يوميا او علي الاقل 3 مرات في الاسبوع.</p>
+
+  <h3>فوايد صحيه</h3>
+  <ul>
+    <li>تحسين قوه وتحمل العضلات</li>
+    <li>تعزيز صحه القلب والاوعيه الدمويه</li>
+    <li>تحسين المرونه وتقليل خطر الاصابات</li>
+    <li>زياده مستويات الطاقه وتحسين المزاج</li>
+  </ul>
+
+  <h2>نصايح غذايه</h2>
+
+  <h3>مكونات الوجبه</h3>
+  <p>يجب ان تحتوي الوجبات علي مزيج متوازن من البروتينات، الكربوهيدرات، الدهون الصحيه، الفيتامينات، والمعادن لدعم التمارين والتعافي.</p>
+
+  <h3>السعرات الحراريه</h3>
+  <p>اضبط كميه السعرات وفقا لهدفك: زيادتها لزياده الكتله العضليه، او تقليلها لفقدان الدهون، او الحفاظ عليها للصحه العامه.</p>
+
+  <h3>فوايد التغذيه الجيده</h3>
+  <ul>
+    <li>دعم نمو واصلاح العضلات</li>
+    <li>تعزيز المناعه</li>
+    <li>الحفاظ علي وزن صحي</li>
+    <li>تحسين الطاقه والنشاط العام</li>
+  </ul>
+
+  <h2>كيفيه تحديد اهدافك الرياضيه</h2>
+  <p>ابدا بوضع اهداف واضحه وواقعيه، وحققها بخطوات صغيره ومتابعه التقدم بشكل منتظم.</p>
+
+  <h2>نصايح للالتزام بالروتين الرياضي</h2>
+  <ul>
+    <li>ضع جدولا ثابتا للتمارين واتبعه.</li>
+    <li>تمرن مع صديق للحفاظ علي الحماس.</li>
+    <li>كافي نفسك عند تحقيق كل هدف.</li>
+  </ul>
+
+  <h2>نصايح عامه</h2>
+  <h3>كيفيه الالتزام بالروتين</h3>
+  <p>الاستمراريه هي الاساس. حاول اداء التمارين في نفس الوقت يوميا وجهز ادواتك مسبقا.</p>
+
+  <h3>كيفيه تجنب الاصابات</h3>
+  <p>قم بالاحماء قبل التمارين، وابدا بتمارين الاطاله، واستمع لجسمك. لا تتمرن عند الشعور بالالم.</p>
+
+  <ul>
+    <li>تحيه للاستاذ فادي العربيد، وحاتم ابو عرابي، ومحمد النشاش</li>
+  </ul>
+
+  <h2>تواصل معنا</h2>
+  <form action="#" method="post">
+    <label for="name">الاسم:</label>
+    <input type="text" id="name" name="name" placeholder="اسمك الكامل" required />
+
+    <label for="email">البريد الالكتروني:</label>
+    <input type="email" id="email" name="email" placeholder="بريدك الالكتروني" required />
+
+    <label for="message">رسالتك:</label>
+    <textarea id="message" name="message" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+
+    <button type="submit" class="submit-btn">ارسال الرساله</button>
+  </form>
+
+  <div class="social-media">
+    <h2>تابعنا علي</h2>
+    <a href="#" target="_blank">فيسبوك</a>
+    <a href="#" target="_blank">انستغرام</a>
+    <a href="#" target="_blank">تويتر</a>
+    <a href="#" target="_blank">يوتيوب</a>
+  </div>
+
+</div>
+
+</body>
+</html>

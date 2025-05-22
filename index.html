@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>تسجيل الدخول - مدونة فادي للياقة</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-box {
+      background: linear-gradient(135deg, #1c1c1c, #2e2e2e);
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 255, 135, 0.1);
+      width: 320px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #00ff88;
+      margin-bottom: 25px;
+      font-size: 1.8em;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      background-color: #2a2a2a;
+      color: #ffffff;
+    }
+
+    input::placeholder {
+      color: #aaaaaa;
+    }
+
+    button {
+      background-color: #00cc66;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #00b359;
+    }
+
+    .register-btn {
+      background-color: #007bff;
+    }
+
+    .register-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h2>تسجيل الدخول</h2>
+    <form onsubmit="handleLogin(event)">
+      <input type="email" id="email" placeholder="أدخل بريدك الإلكتروني" required />
+      <input type="password" id="password" placeholder="أدخل كلمة المرور" required />
+      <button type="submit">دخول</button>
+    </form>
+    <button class="register-btn" onclick="goToRegister()">إنشاء حساب</button>
+  </div>
+
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      if (email && password) {
+        window.location.href = "Home Page.html"; 
+      } else {
+        alert("يرجى إدخال البريد الإلكتروني وكلمة المرور.");
+      }
+    }
+
+    function goToRegister() {
+      window.location.href = "register.html"; 
+    }
+  </script>
+
+</body>
+</html>
